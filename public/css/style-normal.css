@@ -375,7 +375,7 @@
   border-radius: 3px;
   background: #414141;
   color: #fff;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 0 3px 18px rgba(0, 0, 0, 0.15);
   position: absolute;
   bottom: 15px;
@@ -489,6 +489,7 @@
 .aj-list__image img {
   width: 100%;
   display: none;
+  margin-bottom: 0;
 }
 .aj-list .aj-list__image img {
   display: none;
@@ -509,7 +510,7 @@
   float: right;
 }
 .aj-list__price strong {
-  color: #fff;
+  color: #fff !important;
 }
 .aj-list__title {
   white-space: nowrap;
@@ -615,7 +616,7 @@
   border-radius: 3px;
   background: #414141;
   color: #fff;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 0 3px 18px rgba(0, 0, 0, 0.15);
   position: absolute;
   bottom: 15px;
