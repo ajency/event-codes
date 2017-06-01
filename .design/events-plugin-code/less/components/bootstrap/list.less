@@ -1,0 +1,380 @@
+.aj-list {
+	// ============================
+    // barebones styles
+    // ============================
+    &__inner:after {
+    	content: '';
+    	display: table;
+    	clear: both;
+    }
+    &__single {
+    	// width: 33.3%;
+    	// padding: 0 15px;
+    	// float: left;
+    	margin-bottom: 15px;
+    }
+    &__inner {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+	&__top {
+		position: relative;
+        width: 25%;
+        // float: left;
+	}
+	&__image {
+		display: block;
+		font-size: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+		img {
+			width: 100%;
+            display: none;
+		}
+	}
+	&__datein, &__time {
+		display: block;
+	}
+	&__datein {
+		font-weight: bold;
+	}
+    &__price strong {
+        color: #fff;
+    }
+	&__address img {
+		display: inline-block;
+		// vertical-align: bottom;
+		margin-right: 6px;
+        margin-bottom: 0;
+	}
+	&__title {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+    &__content {
+        // float: left;
+        width: 75%;
+        padding: 15px 25px;
+        border: 1px solid #eee;
+        min-height: 135px;
+        z-index: 1;
+    }
+	@media screen and (max-width: 991px) {
+        &__top {
+            width: 35%;
+        }
+        &__content {
+            width: 65%;
+        }
+	}
+	@media screen and (max-width: 767px) {
+        &__top, &__content {
+            width: 100%;
+        }
+        &__inner {
+            flex-direction: column;
+        }
+        &__image {
+            position: relative;
+            img {
+                display: block;
+            }
+        }
+	}
+
+	// ============================
+    // basic styles
+    // ============================
+    &--basic &__date {
+    	position: absolute;
+    	top: 15px;
+    	left: -15px;
+    }
+    &--basic &__price,
+    &--bigdate &__price {
+    	// position: absolute;
+        // right: 15px;
+        // top: 15px;
+        font-size: 1.2em;
+        margin-top: -68px;
+    }
+    &--basic &__title,
+    &--bigdate &__title,
+    &--overlay &__title,
+    &--complete &__title {
+    	margin: 0;
+    	margin-bottom: 8px;
+    }
+    &--basic &__desc,
+    &--bigdate &__desc,
+    &--overlay &__desc,
+    &--complete &__desc {
+    	font-size: 0.9em;
+    	line-height: 1.5;
+    	opacity: 0.6;
+    	margin-top: 1.2em;
+        margin-bottom: 0;
+    }
+    &--basic &__datein {
+    	font-size: 1.1em;
+    	margin-bottom: 3px;
+    }
+    &--basic &__time {
+    	font-size: 0.9em;
+    }
+    &--basic &__date {
+    	.whiteDate();
+    }
+    @media screen and (max-width: 1199px) {
+        &--basic &__date {
+            left: 15px;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        &--basic &__title,
+        &--bigdate &__title,
+        &--overlay &__title {
+            padding-right: 64px;
+        }
+        &--basic &__price,
+        &--bigdate &__price {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            margin-top: 0;
+        }
+    }
+
+    // ============================
+    // big-date styles
+    // ============================
+    &--bigdate &__content,
+    &--complete &__content {
+    	padding: 15px;
+    	background: #fff;
+    	box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    &--bigdate &__date,
+    &--complete &__date {
+    	.blackDate();
+    	position: absolute;
+    	bottom: 15px;
+    	left: -15px;
+    	font-size: 0.9em;
+    	text-align: center;
+    	width: 145px;
+    }
+    &--bigdate &__datein,
+    &--complete &__datein {
+    	font-weight: normal;
+    }
+    &--bigdate &__day,
+    &--complete &__day {
+    	font-size: 1.8em;
+    	display: block;
+    	font-weight: bold;
+    }
+    &--bigdate &__datein > span,
+    &--complete &__datein > span {
+    	display: inline-block;
+    	vertical-align: middle;
+    	padding: 0 5px;
+    	line-height: 1.15;
+    	margin-bottom: 7px;
+    	// font-weight: normal;
+    }
+    &--bigdate &__time,
+    &--complete &__time {
+    	font-size: 0.85em;
+    	opacity: 0.7;
+    }
+    @media screen and (max-width: 1199px) {
+        &--bigdate &__date,
+        &--complete &__date {
+            left: 15px;
+            top: 15px;
+            bottom: auto;
+        }
+    }
+
+	// ============================
+    // overlay styles
+    // ============================
+    &--overlay &__inner {
+    	align-items: center;
+    }
+    &--overlay &__top {
+        margin-right: -25px;
+        width: 27%;
+    }
+    &--overlay &__image {
+        position: relative;
+        height: 200px;
+        // background-size: cover;
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // img {
+        //     display: none;
+        // }
+    }
+    &--overlay &__content {
+        background: #fff;
+        // margin-left: -25px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        min-height: 160px;
+        z-index: 5;
+    }
+    &--overlay &__date {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    	// position: absolute;
+    	// bottom: 75px;
+    	// left: 45px;
+        & > span {
+            width: 50%;
+        }
+    }
+    // &--overlay.aj--hastime &__date {
+    // 	bottom: 65px;
+    // }
+    &--overlay &__time {
+    	font-size: 0.9em;
+        text-align: right;
+    }
+    &--overlay &__price {
+    	position: absolute;
+    	bottom: 25px;
+    	font-size: 1.3em;
+    	right: 77%;
+    }
+    @media screen and (max-width: 991px) {
+        &--overlay &__price {
+            right: 70%;
+        }
+        &--overlay &__top {
+            width: 38%;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &--overlay &__price {
+            right: 15px;
+            bottom: auto;
+            top: 146px;
+        }
+        &--overlay &__top {
+            margin-right: 0;
+            width: 100%;
+        }
+        &--overlay &__content {
+            width: 100%;
+        }
+        &--overlay &__image {
+            img {
+                display: none;
+            }
+        }
+    }
+
+    // ============================
+    // complete overlay styles
+    // ============================
+    @media screen and (min-width: 768px) {
+        &--complete &__inner {
+            display: block;
+            position: relative;
+        }
+        &--complete &__top,
+        &--complete &__content {
+            width: 100%;
+        }
+        &--complete &__top {
+            position: static;
+        }
+        &--complete &__title a,
+        &--complete &__desc,
+        &--complete &__address a {
+            color: #fff;
+        }
+        &--complete &__image {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // right: 0;
+            // bottom: 0;
+            // background-size: cover;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // img {
+            //     display: none;
+            // }
+        }
+        &--complete &__content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            background: transparent;
+            box-shadow: none;
+            padding-left: 35%;
+
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.47+100 */
+            background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.47) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.47) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.47) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#78000000',GradientType=1 ); /* IE6-9 */
+        }
+        &--complete &__date {
+            left: 0;
+            border-radius: 0 3px 3px 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 140px;
+        }
+    }
+}
+
+.sidebar {
+    .aj-list {
+        &__top, &__content {
+            width: 100%;
+        }
+        &__inner {
+            flex-direction: column;
+        }
+
+        &--bigdate .aj-list__date,
+        &--complete .aj-list__date {
+            left: 15px;
+            top: 15px;
+            bottom: auto;
+        }
+
+        &--overlay .aj-list__content {
+            margin-left: 0;
+        }
+        &--overlay .aj-list__price {
+            right: 15px;
+            bottom: auto;
+            top: 150px;
+        }
+
+        &--complete .aj-list__content {
+            padding-left: 15px;
+            padding-top: 150px;
+        }
+        @media screen and (max-width: 767px) {
+            &--complete .aj-list__content {
+                padding-left: 15px;
+                padding-top: 15px;
+            }
+        }
+    }
+}

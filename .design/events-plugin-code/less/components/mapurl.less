@@ -1,0 +1,16 @@
+.maplink() {
+	display: inline-block;
+	width: 12px;
+	height: 13px;
+	background-image: url(../img/ext-link.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.5;
+	margin-left: 5px;
+	vertical-align: middle;
+}
+
+.aj__address a:after {
+	content: '';
+	.maplink();
+}
