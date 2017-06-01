@@ -17,69 +17,69 @@ The default code will be [event_codes] which will display the list of most recen
  
 For e.g: If you want to display 3 upcoming events belonging to “music” category.
  
-`[event_codes cat=’music’ count=’3’]`
+`[event_codes cat='music' count='3']`
 
 
 = Shortcode Options: =
 * View Type & Style (view, style)
   This is used to select the type of view and style to display the event. The default view is list with basic style.
-  `[event_codes view= ‘list’ style= ‘basic’]`
+  `[event_codes view= ‘list' style= ‘basic']`
  
   Different types of views:
  
   1)List
 	List view has 4 styles: basic, big date, card overlay and complete overlay
-            `[event_codes view=‘list’ style=‘basic’]`
-            `[event_codes view=‘list’ style=‘big-date’]`
-            `[event_codes view=‘list’ style=‘card-overlay’]`
-           ` [event_codes view=‘list’ style=‘complete-overlay’]`  
+            `[event_codes view=‘list' style=‘basic']`
+            `[event_codes view=‘list' style=‘big-date']`
+            `[event_codes view=‘list' style=‘card-overlay']`
+           ` [event_codes view=‘list' style=‘complete-overlay']`  
  
   2)Tabular 
 	Tabular view has 2 styles: basic and shadow
-             `[event_codes view=‘tabular’ style=‘basic’]`
-             `[event_codes view=‘tabular’ style=‘shadow’]`
+             `[event_codes view=‘tabular' style=‘basic']`
+             `[event_codes view=‘tabular' style=‘shadow']`
 	row value displays alternate gray shade for rows. This can be applied for both styles.
-             `[event_codes view=‘tabular’ style=‘shadow’ row=‘alternate-gray’]`
+             `[event_codes view=‘tabular' style=‘shadow' row=‘alternate-gray']`
 			 
 * Show Time (showtime)
   This is used to display the time of the event. Option used is showtime and can have value true/false. Default is false.
-	`[event_codes showtime=’true’]`
+	`[event_codes showtime='true']`
  
 * Description (description)
   This controls whether the description of the event is to be shown or not. The option is description with value true/false. Default is false.
-  `[event_codes description=’true’]`
+  `[event_codes description='true']`
  
 * Number of events (count)
   Specifies the total number of events that are to be shown. Default is 5. Option value is count.
-  `[event_codes count=’4’]`
+  `[event_codes count='4']`
  
 * Offset (offset)
   Option offset is to skip a given number of events while listing. A good use case is when you want to split your event list into columns with multiple shortcodes. Default is  0.
-  `[event_codes offset=’3’]`
+  `[event_codes offset='3']`
  
 * Category (cat)
   Displays the events based on the category. Can be used to display events belonging to different categories separated by comma. Option is cat.
- `[event_codes cat=’music,sports’]`
+ `[event_codes cat='music,sports']`
 
 * Tags (tag)
   Filters events based on tags. For multiple tags use commas. Option is tag
- `[event_codes tag=’music,sports’]`
+ `[event_codes tag='music,sports']`
  
 * Past Events (past)
   This will display the list of all the past events. Option value is past & default is false.
- `[event_codes past=’true’]`
+ `[event_codes past='true']`
  
 * Featured Events (featured)
   This will display the list of all the featured events. Default is false & option is featured.
-  `[event_codes featured=’true’]`
+  `[event_codes featured='true']`
  
 * Show View All (show-view-all)
   This will decide if the the “View All” action should be displayed or no. Default is true & option is show-view-all.
- `[event_codes show-view-all=’false’]`
+ `[event_codes show-view-all='false']`
  
 * Show Load More (show-load-more)
   This will decide if the the “Load More” action should be displayed or no. Default is true & option is show-load-more.
- `[event_codes show-load-more=’false’]`
+ `[event_codes show-load-more='false']`
  
 == Installation ==
 
@@ -103,63 +103,63 @@ For e.g: If you want to display 3 upcoming events belonging to “music” categ
 
 * View Type & Style (view, style)
   This is used to select the type of view and style to display the event. The default view is list with basic style.
-  `[event_codes view= ‘list’ style= ‘basic’]`
+  `[event_codes view= ‘list' style= ‘basic']`
  
   Different types of views:
  
   1)List
 	List view has 4 styles: basic, big date, card overlay and complete overlay
-            `[event_codes view=‘list’ style=‘basic’]`
-            `[event_codes view=‘list’ style=‘big-date’]`
-            `[event_codes view=‘list’ style=‘card-overlay’]`
-           ` [event_codes view=‘list’ style=‘complete-overlay’]`  
+            `[event_codes view=‘list' style=‘basic']`
+            `[event_codes view=‘list' style=‘big-date']`
+            `[event_codes view=‘list' style=‘card-overlay']`
+           ` [event_codes view=‘list' style=‘complete-overlay']`  
  
   2)Tabular 
 	Tabular view has 2 styles: basic and shadow
-             `[event_codes view=‘tabular’ style=‘basic’]`
-             `[event_codes view=‘tabular’ style=‘shadow’]`
+             `[event_codes view=‘tabular' style=‘basic']`
+             `[event_codes view=‘tabular' style=‘shadow']`
 	row value displays alternate gray shade for rows. This can be applied for both styles.
-             `[event_codes view=‘tabular’ style=‘shadow’ row=‘alternate-gray’]`
+             `[event_codes view=‘tabular' style=‘shadow' row=‘alternate-gray']`
 			 
 * Show Time (showtime)
   This is used to display the time of the event. Option used is showtime and can have value true/false. Default is false.
-	`[event_codes showtime=’true’]`
+	`[event_codes showtime='true']`
  
 * Description (description)
   This controls whether the description of the event is to be shown or not. The option is description with value true/false. Default is false.
-  `[event_codes description=’true’]`
+  `[event_codes description='true']`
  
 * Number of events (count)
   Specifies the total number of events that are to be shown. Default is 5. Option value is count.
-  `[event_codes count=’4’]`
+  `[event_codes count='4']`
  
 * Offset (offset)
   Option offset is to skip a given number of events while listing. A good use case is when you want to split your event list into columns with multiple shortcodes. Default is  0.
-  `[event_codes offset=’3’]`
+  `[event_codes offset='3']`
  
 * Category (cat)
   Displays the events based on the category. Can be used to display events belonging to different categories separated by comma. Option is cat.
- `[event_codes cat=’music,sports’]`
+ `[event_codes cat='music,sports']`
 
 * Tags (tag)
   Filters events based on tags. For multiple tags use commas. Option is tag
- `[event_codes tag=’music,sports’]`
+ `[event_codes tag='music,sports']`
  
 * Past Events (past)
   This will display the list of all the past events. Option value is past & default is false.
- `[event_codes past=’true’]`
+ `[event_codes past='true']`
  
 * Featured Events (featured)
   This will display the list of all the featured events. Default is false & option is featured.
-  `[event_codes featured=’true’]`
+  `[event_codes featured='true']`
  
 * Show View All (show-view-all)
   This will decide if the the “View All” action should be displayed or no. Default is true & option is show-view-all.
- `[event_codes show-view-all=’false’]`
+ `[event_codes show-view-all='false']`
  
 * Show Load More (show-load-more)
   This will decide if the the “Load More” action should be displayed or no. Default is true & option is show-load-more.
- `[event_codes show-load-more=’false’]`
+ `[event_codes show-load-more='false']`
 
 = Do you have some problems with plugin installation? =
 
