@@ -15,7 +15,7 @@
  * Plugin Name:       Event Codes - Shortcodes that work with other event plugins
  * Plugin URI:        http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins
  * Description:       List your events anywhere by adding shortcodes to The Events Calendar Plugin (Free Version) by Modern Tribe.
- * Version:           0.5
+ * Version:           0.5.1
  * Author:            WPdwarves
  * Author URI:        http://wpdwarves.com
  * License:           GPL-2.0+
