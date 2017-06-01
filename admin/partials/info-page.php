@@ -109,25 +109,25 @@
                     <tr><td>To display list of events in grid view for category conference and health.</td></tr>
                     <tr><td>[event_codes view='list' style='basic' cat='conference, health']</td></tr>
                     <tr><td><a href="#">Click to view the example</a></td></tr>
-                    <tr><td><img src="one.png"></td></tr>
+                    <tr><td><img src="<?php echo plugins_url( '/public/img/ex1.png', EVENT_CODES_FILE ); ?>"></td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
                     <tr>  <td>To display  events in tabular view shadow style along with description and time</td></tr>
                     <tr>  <td> [event_codes view='tabular' style='shadow' showtime='true' description='true'] </td></tr>
                     <tr><td><a href="#">Click to view the example</a></td></tr>
-                    <tr><td><img src="one.png"></td></tr>
+                    <tr><td><img src="<?php echo plugins_url( '/public/img/ex2.png', EVENT_CODES_FILE ); ?>"></td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
                     <tr><td>To  display 6 events in tabular view basic style with alternate row gray.</td></tr>
                     <tr><td>[event_codes view='tabular' style='basic' row='alternate-gray' showtime='true' description='true' count='6' ] </td></tr>
                     <tr><td><a href="#">Click to view the example</a></td></tr>
-                    <tr><td><img src="one.png"></td></tr>
+                    <tr><td><img src="<?php echo plugins_url( '/public/img/ex3.png', EVENT_CODES_FILE ); ?>"></td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
                     <tr><td>To display list of featured events</td></tr>
                     <tr><td> [event_codes view='list' style='card-overlay' featured='true']</td></tr>
                     <tr><td><a href="#">Click to view the example</a></td></tr>
-                    <tr><td><img src="one.png"></td></tr>
+                    <tr><td><img src="<?php echo plugins_url( '/public/img/ex4.png', EVENT_CODES_FILE ); ?>"></td></tr>
                 </table>
             </td>
         </tr>
