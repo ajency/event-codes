@@ -1,130 +1,135 @@
 <div class="wrap">
-    <h2><?php _e( 'Shortcodes The Events Calendar' ); ?></h2>
-
-    <p><?php echo sprintf( esc_html__( 'The shortcode displays lists of your events. For example the shortcode to show next 8 events in the category "%s" in ASC order with date showing:', 'the-events-calendar-shortcode' ), 'festival' ); ?></p>
-
-    <pre>[ecs-list-events cat='festival' limit='8']</pre>
-
-    <table>
-        <tbody>
-        <tr valign="top">
-            <td valign="top">
-
-                <div>
-                    <h2><?php echo esc_html( __( 'Basic shortcode', 'the-events-calendar-shortcode' ) ); ?></h2>
-                    <blockquote>[ecs-list-events]</blockquote>
-
-                    <h2><?php echo esc_html( __( 'Shortcode Options', 'the-events-calendar-shortcode' ) ); ?></h2>
-                    <?php do_action( 'ecs_admin_page_options_before' ); ?>
-
-                    <h3>cat</h3>
-                    <p><?php echo esc_html( __( 'Represents single event category.  Use commas when you want multiple categories', 'the-events-calendar-shortcode' ) ); ?>
-                    <blockquote>[ecs-list-events cat='festival']</blockquote>
-                    <blockquote>[ecs-list-events cat='festival, workshops']</blockquote>
-
-                    <?php do_action( 'ecs_admin_page_options_after_cat' ); ?>
-
-                    <h3>limit</h3>
-                    <p><?php echo esc_html( __( 'Total number of events to show. Default is 5.', 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events limit='3']</blockquote>
-                    <h3>order</h3>
-                    <p><?php echo esc_html( __( "Order of the events to be shown. Value can be 'ASC' or 'DESC'. Default is 'ASC'. Order is based on event date.", 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events order='DESC']</blockquote>
-                    <h3>date</h3>
-                    <p><?php echo esc_html( __( "To show or hide date. Value can be 'true' or 'false'. Default is true.", 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events eventdetails='false']</blockquote>
-                    <h3>venue</h3>
-                    <p><?php echo esc_html( __( "To show or hide the venue. Value can be 'true' or 'false'. Default is false.", 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events venue='true']</blockquote>
-                    <h3>excerpt</h3>
-                    <p><?php echo esc_html( __( 'To show or hide the excerpt and set excerpt length. Default is false.', 'the-events-calendar-shortcode' ) ); ?><p>
-                    <blockquote>[ecs-list-events excerpt='true']</blockquote>
-                    <blockquote>[ecs-list-events excerpt='300']</blockquote>
-                    <h3>thumb</h3>
-                    <p><?php echo esc_html( __( 'To show or hide thumbnail/featured image. Default is false.', 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events thumb='true']</blockquote>
-                    <p><?php echo esc_html( __( 'You can use 2 other attributes: thumbwidth and thumbheight to customize the thumbnail size', 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events thumb='true' thumbwidth='150' thumbheight='150']</blockquote>
-                    <p><?php echo esc_html( __( 'or use thumbsize to specify the pre-set size to use, for example:', 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events thumb='true' thumbsize='large']</blockquote>
-
-                    <h3>message</h3>
-                    <p><?php echo esc_html( sprintf( __( "Message to show when there are no events. Defaults to '%s'", 'the-events-calendar-shortcode' ), translate( 'There are no upcoming events at this time.', 'tribe-events-calendar' ) ) ); ?></p>
-                    <h3>viewall</h3>
-                    <p><?php echo esc_html( sprintf( __( "Determines whether to show '%s' or not. Values can be 'true' or 'false'. Default to 'true'", 'the-events-calendar-shortcode' ), translate( 'View all events', 'tribe-events-calendar' ) ) ); ?></p>
-                    <blockquote>[ecs-list-events cat='festival' limit='3' order='DESC' viewall='false']</blockquote>
-                    <h3>contentorder</h3>
-                    <p><?php echo esc_html( sprintf( __( 'Manage the order of content with commas. Defaults to %s', 'the-events-calendar-shortcode' ), 'title, thumbnail, excerpt, date, venue' ) ); ?> </p>
-                    <blockquote>[ecs-list-events cat='festival' limit='3' order='DESC' viewall='false' contentorder='title, thumbnail, excerpt, date, venue']</blockquote>
-                    <h3>month</h3>
-                    <p><?php echo esc_html( sprintf( __( "Show only specific Month. Type '%s' for displaying current month only, ie:", 'the-events-calendar-shortcode' ), 'current' ) ); ?></p>
-                    <blockquote>[ecs-list-events cat='festival' month='2015-06']</blockquote>
-                    <h3>past</h3>
-                    <p><?php echo esc_html( __( 'Show outdated events (ie. events that have already happened)', 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events cat='festival' past='yes']</blockquote>
-                    <h3>key</h3>
-                    <p><?php echo esc_html( __( 'Use to order by the start date instead of the end date', 'the-events-calendar-shortcode' ) ); ?></p>
-                    <blockquote>[ecs-list-events cat='festival' key='start date']</blockquote>
-
-                    <?php do_action( 'ecs_admin_page_options_after' ); ?>
-
-                </div>
-
+    <h3>Event Codes - Shortcodes that work with other event plugins</h3>
+    <h4>Description:</h4>
+    <p>List your events anywhere by adding shortcodes to The Events Calendar Plugin (Free Version) by Modern Tribe.</p>
+    <p>This plugin provides a simple way to add event codes on the page to display the list of events you want.
+        The default code will be [event_codes] which will display the list of most recent Upcoming Events, by default 5 events will be shown.</p>
+    <p>For e.g: If you want to display 3 upcoming events belonging to “music” category.</p>
+    <blockquote>[event_codes cat='music' count='3']</blockquote>
+    <table style="width:100%;">
+        <tr>
+            <td  style="vertical-align:top">
+                <table>
+                    <tr><th style="text-align:left"><b>Shortcode Options:</b></th></tr>
+                    <tr><td><b>View Type & Style (view, style)</b></td></tr>
+                    <tr><td>This is used to select the type of view and style to display the event. The default view is list with basic style.</td></tr>
+                    <tr><td>[event_codes view='list' style='basic']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>Different types of views:</td></tr>
+                    <tr><td>1) List</td></tr>
+                    <tr><td>List view has 4 styles: basic, big date, card overlay and complete overlay</td></tr>
+                    <tr><td>[event_codes view='list' style='basic']</td></tr>
+                    <tr><td>[event_codes view='list' style='big-date']</td></tr>
+                    <tr><td>[event_codes view='list' style='card-overlay']</td></tr>
+                    <tr><td>[event_codes view='list' style='complete-overlay']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>2)   Tabular</td></tr>
+                    <tr><td>Tabular view has 2 styles: basic and shadow</td></tr>
+                    <tr><td>[event_codes view='tabular' style='basic']</td></tr>
+                    <tr><td>[event_codes view='tabular' style='shadow']</td></tr>
+                    <tr><td>[event_codes view='tabular' style='shadow' row='alternate-gray'] - row
+                            value displays alternate gray shade for rows. This can be applied for both styles.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Show Time (showtime)</b></td></tr>
+                    <tr><td>This is used to display the time of the event. Option used is showtime and can have value true/false. Default is false.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes showtime='true']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Description (description)</b></td></tr>
+                    <tr><td>This controls whether the description of the event is to be shown or not. The option is description with value true/false. Default is false.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes description='true']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Number of events (count)</b></td></tr>
+                    <tr><td>Specifies the total number of events that are to be shown. Default is 5. Option value is count.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes count='4']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Offset (offset)</b></td></tr>
+                    <tr><td>Option offset is to skip a given number of events while listing. A good use case is when you want to split your event list into columns with multiple shortcodes. Default is  0.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes offset='3']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Category (cat)</b></td></tr>
+                    <tr><td>Displays the events based on the category. Can be used to display events belonging to different categories separated by comma. Option is cat.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes cat='music,sports']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Tags (tag)</b></td></tr>
+                    <tr><td>Filters events based on tags. For multiple tags use commas. Option is tag</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes tag='music,sports']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Past Events (past)</b></td></tr>
+                    <tr><td>This will display the list of all the past events. Option value is past & default is false.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes past='true']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Featured Events (featured)</b></td></tr>
+                    <tr><td>This will display the list of all the featured events. Default is false & option is featured.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes featured='true']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Show View All (show-view-all)</b></td></tr>
+                    <tr><td>This will decide if the the “View All” action should be displayed or no. Default is true & option is show-view-all.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes show-view-all='false']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td><b>Show Load More (show-load-more)</b></td></tr>
+                    <tr><td>This will decide if the the “Load More” action should be displayed or no. Default is true & option is show-load-more.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes show-load-more='false']</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                </table>
             </td>
-            <td valign="top" class="styling">
-                <h3>Styling/Design</h3>
-
-                <?php do_action( 'ecs_admin_page_styling_before' ); ?>
-
-                <?php if ( apply_filters( 'ecs_show_upgrades', true ) ): ?>
-
-                    <p><?php echo esc_html( __( 'By default the plugin does not include styling. Events are listed in ul li tags with appropriate classes for styling and you can add your own CSS:', 'the-events-calendar-shortcode' ) ) ?></p>
-
-                    <ul>
-                        <li>ul class="ecs-event-list"</li>
-                        <li>li class="ecs-event"</li>
-                        <li><?php echo esc_html( sprintf( __( 'event title link is %s', 'the-events-calendar-shortcode' ), 'H4 class="entry-title summary"' ) ); ?> </li>
-                        <li><?php echo esc_html( sprintf( __( 'date class is %s', 'the-events-calendar-shortcode' ), 'time' ) ); ?></li>
-                        <li><?php echo esc_html( sprintf( __( 'venue class is %s', 'the-events-calendar-shortcode' ), 'venue' ) ); ?></li>
-                        <li>span .ecs-all-events</li>
-                        <li>p .ecs-excerpt</li>
-                    </ul>
-
-                    <div id="ecs-pro-description">
-
-                        <h3><?php echo esc_html__( 'Want a better looking design without adding any CSS?', 'the-events-calendar-shortcode' ) ?></h3>
-                        <p><?php echo sprintf( esc_html__( 'Check out %sThe Events Calendar Shortcode PRO%s', 'the-events-calendar-shortcode' ), '<a target="_blank" href="https://eventcalendarnewsletter.com/the-events-calendar-shortcode?utm_source=plugin&utm_medium=link&utm_campaign=tecs-help-design&utm_content=description">', '</a>' ); ?></p>
-                        <div id="ecs-pro-designs">
-                            <p><a target="_blank" href="https://eventcalendarnewsletter.com/the-events-calendar-shortcode?utm_source=plugin&utm_medium=link&utm_campaign=tecs-help-design-image-1&utm_content=description"><img alt="" style="width: 300px;" src="<?php echo plugins_url( '/static/shortcode-default-design-2.png', TECS_CORE_PLUGIN_FILE ) ?>"><br><?php echo esc_html( __( 'Pro version default design example', 'the-events-calendar-shortcode' ) ); ?></a></p>
-                            <p><a target="_blank" href="https://eventcalendarnewsletter.com/the-events-calendar-shortcode?utm_source=plugin&utm_medium=link&utm_campaign=tecs-help-design-image-2&utm_content=description"><img alt="" style="width: 300px;" src="<?php echo plugins_url( '/static/event-calendar-shortcode-compact-design.png', TECS_CORE_PLUGIN_FILE ) ?>"><br><?php echo esc_html( __( 'Pro version compact design example', 'the-events-calendar-shortcode' ) ); ?></a></p>
-                            <p><a target="_blank" href="https://eventcalendarnewsletter.com/the-events-calendar-shortcode?utm_source=plugin&utm_medium=link&utm_campaign=tecs-help-design-image-grouped&utm_content=description"><img alt="" style="width: 300px;" src="<?php echo plugins_url( '/static/the-events-calendar-shortcode-grouped-design.png', TECS_CORE_PLUGIN_FILE ) ?>"><br><?php echo esc_html( __( 'Pro version grouped design example', 'the-events-calendar-shortcode' ) ); ?></a></p>
-                        </div>
-
-                        <h3 class="additional-options"><?php echo esc_html__( "In addition to designs, you'll get more options including:", 'the-events-calendar-shortcode' ); ?></h3>
-                        <h4><?php echo esc_html__( 'Number of days', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'Choose how many days to show events from, ie. 1 day or a week', 'the-events-calendar-shortcode' ) ?></p>
-                        <h4><?php echo esc_html__( 'Tag', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'Filter events listed by one or more tags', 'the-events-calendar-shortcode' ) ?></p>
-                        <h4><?php echo esc_html__( 'Single Event', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'List the details of a single event by ID, for example on a blog post', 'the-events-calendar-shortcode' ) ?></p>
-                        <h4><?php echo esc_html__( 'Date', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'Show only events for a specific day (ie. 2017-04-16), great for conferences', 'the-events-calendar-shortcode' ) ?></p>
-                        <h4><?php echo esc_html__( 'Year', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'Show only events for a specific year', 'the-events-calendar-shortcode' ) ?></p>
-                        <h4><?php echo esc_html__( 'Offset', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'Skip a certain number of events from the beginning, useful for using multiple shortcodes on the same page or splitting into columns.', 'the-events-calendar-shortcode' ) ?></p>
-                        <h4><?php echo esc_html__( 'Full Description', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'Use the full description instead of the excerpt (short description) of an event in the listing', 'the-events-calendar-shortcode' ) ?></p>
-                        <h4><?php echo esc_html__( 'Custom Design', 'the-events-calendar-shortcode' ) ?></h4>
-                        <p><?php echo esc_html__( 'Use the new default or compact designs, or create your own using one or more templates in your theme folder', 'the-events-calendar-shortcode' ) ?></p>
-                        <p><?php echo sprintf( esc_html__( '%sGet The Events Calendar Shortcode PRO%s', 'the-events-calendar-shortcode' ), '<a class="ecs-button" target="_blank" href="https://eventcalendarnewsletter.com/the-events-calendar-shortcode?utm_source=plugin&utm_medium=link&utm_campaign=tecs-help-after-options&utm_content=description">', '</a>' ); ?></p>
-
-                    </div>
-                <?php endif; ?>
+            <td  style="vertical-align:top">
+                <table>
+                    <tr><th style="text-align:left"><b>Some Examples:</b></th></tr>
+                    <tr><td>To display list of events in grid view for category conference and health.</td></tr>
+                    <tr><td>[event_codes view='list' style='basic' cat='conference, health']</td></tr>
+                    <tr><td><a href="#">Click to view the example</a></td></tr>
+                    <tr><td><img src="one.png"></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr>  <td>To display  events in tabular view shadow style along with description and time</td></tr>
+                    <tr>  <td> [event_codes view='tabular' style='shadow' showtime='true' description='true'] </td></tr>
+                    <tr><td><a href="#">Click to view the example</a></td></tr>
+                    <tr><td><img src="one.png"></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>To  display 6 events in tabular view basic style with alternate row gray.</td></tr>
+                    <tr><td>[event_codes view='tabular' style='basic' row='alternate-gray' showtime='true' description='true' count='6' ] </td></tr>
+                    <tr><td><a href="#">Click to view the example</a></td></tr>
+                    <tr><td><img src="one.png"></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>To display list of featured events</td></tr>
+                    <tr><td> [event_codes view='list' style='card-overlay' featured='true']</td></tr>
+                    <tr><td><a href="#">Click to view the example</a></td></tr>
+                    <tr><td><img src="one.png"></td></tr>
+                </table>
             </td>
         </tr>
-        </tbody>
     </table>
-
-    <p><small><?php echo sprintf( esc_html__( 'This plugin is not developed by or affiliated with The Events Calendar or %s in any way.', 'the-events-calendar-shortcode' ), 'Modern Tribe' ); ?></small></p>
 </div>

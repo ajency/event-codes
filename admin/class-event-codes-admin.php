@@ -22,7 +22,8 @@
  */
 class Event_Codes_Admin {
 
-	/**
+	const DEFAULT_TEMPLATE_VALUE = 0;
+	/*
 	 * The ID of this plugin.
 	 *
 	 * @since    1.0.0
@@ -199,7 +200,7 @@ class Event_Codes_Admin {
 		$options =  get_option('event_codes_settings');
 		if(empty($options)){
 			$options = [];
-			$options['template'] = 0;
+			$options['template'] = DEFAULT_TEMPLATE_VALUE;
 		}
 		?>
 		<input type="checkbox" name="event_codes_settings[template]" value="1" <?php checked(1, $options['template'], true); ?>>
@@ -208,4 +209,19 @@ class Event_Codes_Admin {
 		<?php
 	}
 
+	function add_plugin_action_links( $links ) {
+		$more_links = array();
+		if ( class_exists( 'Tribe__Settings' ) and method_exists( Tribe__Settings::instance(), 'should_setup_pages' ) and Tribe__Settings::instance()->should_setup_pages() )
+		$more_links[] = '<a href="' . admin_url( 'edit.php?post_type=tribe_events&page=event-codes&tab=settings' ) . '">' . esc_html__( 'Settings', 'the-events-calendar-shortcode' ) . '</a>';
+
+		return array_merge( $more_links , $links );
+	}
+
+	function add_plugin_meta_links( $links, $file ) {
+
+		if($file == 'event-codes/event-codes.php') {
+						$links[] = '<a target="_blank" style="color:#F0C60A; font-weight: bold;" href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins">' . esc_html__( 'Event Codes', 'event-codes' ) . '</a>';
+		}
+		return $links;
+	}
 }

@@ -162,7 +162,14 @@ class Event_Codes {
 		$this->loader->add_action( 'admin_notices', $plugin_admin, 'check_datasources_admin_message' );
 
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_submenu_for_shortcodes', 99999999999999999999999999999 );
+
+		add_filter( 'plugin_action_links_' . 'event-codes/event-codes.php', array( $plugin_admin, 'add_plugin_action_links' ) );
+		$this->loader->add_action( 'plugin_row_meta', $plugin_admin, 'add_plugin_meta_links', 10, 2 );
+
+
+
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'settings_init' );
+/*		$this->loader->add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), $plugin_admin, 'add_plugin_action_links' );*/
 
 
 		$plugin_public = new Event_Codes_Public( $this->get_plugin_name(), $this->get_version() );
