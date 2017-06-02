@@ -30,6 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 define( 'EVENT_CODES_FILE', __FILE__ );
+define( 'EVENT_CODES_BASE_NAME', plugin_basename(__FILE__) );
 
 /**
  * The code that runs during plugin activation.

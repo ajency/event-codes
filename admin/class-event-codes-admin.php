@@ -217,13 +217,13 @@ class Event_Codes_Admin {
 	function add_plugin_action_links( $links ) {
 		$more_links = array();
 		if ( class_exists( 'Tribe__Settings' ) and method_exists( Tribe__Settings::instance(), 'should_setup_pages' ) and Tribe__Settings::instance()->should_setup_pages() )
-		$more_links[] = '<a href="' . admin_url( 'edit.php?post_type=tribe_events&page=event-codes&tab=settings' ) . '">' . esc_html__( 'Settings', 'the-events-calendar-shortcode' ) . '</a>';
+		$more_links[] = '<a href="' . admin_url( 'edit.php?post_type=tribe_events&page=event-codes&tab=settings' ) . '">' . esc_html__( 'Settings', 'event-codes' ) . '</a>';
 		return array_merge( $more_links , $links );
 	}
 
 	function add_plugin_meta_links( $links, $file ) {
 
-		if($file == 'event-codes/event-codes.php') {
+		if($file == EVENT_CODES_BASE_NAME) {
 						$links[] = '<a target="_blank" style="color:#F0C60A; font-weight: bold;" href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins">' . esc_html__( 'Event Codes', 'event-codes' ) . '</a>';
 		}
 		return $links;

@@ -9,8 +9,8 @@ if ( ! defined( 'WPINC' ) ) {
     <h4><?php echo esc_html( __( 'Description:', 'event-codes' ) ); ?></h4>
     <p><?php echo esc_html( __( "Most events plugins don't offer short codes (free) for displaying events. Event Codes can be used with The Events Calendar & other plugins", 'event-codes' ) ); ?></p>
     <p><?php echo esc_html( __( 'This plugin provides a simple way to add event codes on the page to display the list of events you want.
-        The default code will be [event_codes] which will display the list of most recent Upcoming Events, by default 5 events will be shown.</p>
-    <p>For e.g: If you want to display 3 upcoming events belonging to “music” category.', 'event-codes' ) ); ?></p>
+        The default code will be [event_codes] which will display the list of most recent Upcoming Events, by default 5 events will be shown.', 'event-codes' ) ); ?></p>
+    <p>For e.g: If you want to display 3 upcoming events belonging to “music” category.</p>
     <blockquote>[event_codes cat='music' count='3']</blockquote>
     <table style="width:100%;">
         <tr>
