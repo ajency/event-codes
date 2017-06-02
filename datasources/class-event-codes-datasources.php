@@ -51,6 +51,7 @@ class Event_Codes_Datasources {
      * For now its The Events Calendar
      */
     static function get_active_datasource(){
+        //version 1 has only one datasource
         return self::THE_EVENTS_CALENDAR;
     }
 

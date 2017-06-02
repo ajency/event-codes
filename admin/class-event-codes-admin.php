@@ -18,11 +18,16 @@
  *
  * @package    Event_Codes
  * @subpackage Event_Codes/admin
- * @author     Ajency.in <wp@ajency.in>
+
  */
 class Event_Codes_Admin {
 
-	const DEFAULT_TEMPLATE_VALUE = 0;
+	const BOOTSTRAP_TEMPLATE = 1;
+	const NORMAL_TEMPLATE = 0;
+	const DEFAULT_TEMPLATE_VALUE = self::NORMAL_TEMPLATE;
+	const NORMAL_TEMPLATE_STRING = 'normal';
+	const BOOTSTRAP_TEMPLATE_STRING = 'bootstrap';
+
 	/*
 	 * The ID of this plugin.
 	 *
@@ -200,7 +205,7 @@ class Event_Codes_Admin {
 		$options =  get_option('event_codes_settings');
 		if(empty($options)){
 			$options = [];
-			$options['template'] = DEFAULT_TEMPLATE_VALUE;
+			$options['template'] = self::DEFAULT_TEMPLATE_VALUE;
 		}
 		?>
 		<input type="checkbox" name="event_codes_settings[template]" value="1" <?php checked(1, $options['template'], true); ?>>

@@ -1,15 +1,25 @@
+<?php
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+    die;
+}
+?>
 <div class="aj-list__single">
     <div class="aj-list__inner">
         <div class="aj-list__top">
 
             <?php
-            if(!$event['art_work']){
-                $event['art_work'] = plugins_url( '/public/img/dummyimg.png', EVENT_CODES_FILE );
+            if($event['art_work']){
+                $img_style = 'background-image: url('.$event['art_work'].')';
+            } else {
+                $img_style = 'background-color: #444';
             }
             ?>
 
-            <a href="<?php echo $event['title_link']; ?>" class="aj-list__image aj__data-image" style="background-image: url(<?php echo $event['art_work']; ?>);">
-                <img src="<?php echo $event['art_work']; ?>" alt="">
+            <a href="<?php echo $event['title_link']; ?>" class="aj-list__image aj__data-image" style="<?php echo $img_style; ?>">
+                <?php if($event['art_work']) : ?>
+                    <img src="<?php echo $event['art_work']; ?>" alt="">
+                <?php endif; ?>
             </a>
         </div>
         <div class="aj-list__content">

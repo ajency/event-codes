@@ -1,3 +1,9 @@
+<?php
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+    die;
+}
+?>
 <!--
 			L I S T
 			styles: basic / big-date / overlay

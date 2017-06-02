@@ -25,7 +25,6 @@
  * @since      1.0.0
  * @package    Event_Codes
  * @subpackage Event_Codes/includes
- * @author     Ajency.in <wp@ajency.in>
  */
 class Event_Codes {
 
@@ -69,7 +68,7 @@ class Event_Codes {
 	public function __construct() {
 
 		$this->plugin_name = 'event-codes';
-		$this->version = '0.5.2';
+		$this->version = '0.5.5';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -177,7 +176,9 @@ class Event_Codes {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 		$event_shortcodes = new Event_Codes_Shortcode( $this->get_plugin_name(), $this->get_version() );
-		$this->loader->add_action( 'init', $event_shortcodes, 'load_shortcodes' );
+		if (!is_admin()) {
+			$this->loader->add_action( 'init', $event_shortcodes, 'load_shortcodes' );
+		}
 
 		$event_api = new Event_Codes_API( $this->get_plugin_name(), $this->get_version() );
 		$this->loader->add_action( 'rest_authentication_errors', $event_api, 'event_codes_api_auth' );

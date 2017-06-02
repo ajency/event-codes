@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    Event_Codes
  * @subpackage Event_Codes/includes
- * @author     Ajency.in <wp@ajency.in>
+
  */
 class Event_Codes_Deactivator {
 

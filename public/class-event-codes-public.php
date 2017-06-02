@@ -40,9 +40,9 @@ class Event_Codes_Public {
 		$options =  get_option('event_codes_settings');
 		if(empty($options)){
 			$options = [];
-			$options['template'] = 0;
+			$options['template'] = Event_Codes_Admin::DEFAULT_TEMPLATE_VALUE;
 		}
-		$template = $options['template'] == 1 ? 'bootstrap' : 'normal';
+		$template = $options['template'] == Event_Codes_Admin::BOOTSTRAP_TEMPLATE ? Event_Codes_Admin::BOOTSTRAP_TEMPLATE_STRING : Event_Codes_Admin::NORMAL_TEMPLATE_STRING;
 		wp_enqueue_style( 'event_codes', plugin_dir_url( __FILE__ ) . 'css/style-'.$template.'.css', array(), $this->version, 'all' );
 
 	}

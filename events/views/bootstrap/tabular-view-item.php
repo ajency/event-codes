@@ -1,3 +1,9 @@
+<?php
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+    die;
+}
+?>
 <div class="aj-table__info row">
     <div data-display="Event Title" class="aj-table__name col-md-6 col-sm-6">
         <?php if($event['price']) : ?>

@@ -1,7 +1,13 @@
+<?php
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+    die;
+}
+?>
 <div class="wrap">
     <h3>Event Codes - Shortcodes that work with other event plugins</h3>
     <h4>Description:</h4>
-    <p>List your events anywhere by adding shortcodes to The Events Calendar Plugin (Free Version) by Modern Tribe.</p>
+    <p>Most events plugins don't offer short codes (free) for displaying events. Event Codes can be used with The Events Calendar & other plugins.</p>
     <p>This plugin provides a simple way to add event codes on the page to display the list of events you want.
         The default code will be [event_codes] which will display the list of most recent Upcoming Events, by default 5 events will be shown.</p>
     <p>For e.g: If you want to display 3 upcoming events belonging to “music” category.</p>

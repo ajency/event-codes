@@ -106,7 +106,7 @@ class Event_Codes_Shortcode {
             echo "DEBUG Shortcode Atts Accepted : ".json_encode($atts);
         }
         $data = $sc->render_shortcode_markup_and_data($atts);
-        echo $data['markup'];
+        return $data['markup'];
     }
 
     function _validate_atts($atts) {
