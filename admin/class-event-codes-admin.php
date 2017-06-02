@@ -117,7 +117,7 @@ class Event_Codes_Admin {
 			$version = $check['data']['version'];
 			$version_url = 'https://downloads.wordpress.org/plugin/the-events-calendar.'.$version.'.zip';
 			$plugin_page_url = '#';
-			echo '<div class="error"><p>' . sprintf( esc_html( __( 'To begin using Event Codes, please install version %s'.$version.'%s of %sThe Events Calendar%s. To know about previous versions supported by us visit our %splugin page%s.', 'event-codes' ) ), '<a target="_blank" href="' . esc_url( $version_url ) . '" title="' . esc_attr( $title.' '.$version ) . '">', '</a>' , '<a href="' . esc_url( $url ) . '" class="thickbox" title="' . esc_attr( $title ) . '">', '</a>', '<a href="' . esc_url( $plugin_page_url ) . '" title="' . esc_attr( 'Event Codes' ) . '">', '</a>' ) . '</p></div>';
+			echo '<div class="error"><p>' . sprintf( esc_html( __( 'To begin using Event Codes, please install the latest version of %sThe Events Calendar%s', 'event-codes' ) ), '<a href="' . esc_url( $url ) . '" class="thickbox" title="' . esc_attr( $title ) . '">', '</a>' ) . '</p></div>';
 		}
 		#<a href=https://downloads.wordpress.org/plugin/the-events-calendar.'.$check['data']['version'].'.zip>'. $check['data']['version'] .'</a>
 	}
