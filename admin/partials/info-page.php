@@ -5,16 +5,16 @@ if ( ! defined( 'WPINC' ) ) {
 }
 ?>
 <div class="wrap">
-    <h3>Event Codes - Shortcodes that work with other event plugins</h3>
-    <h4>Description:</h4>
-    <p>Most events plugins don't offer short codes (free) for displaying events. Event Codes can be used with The Events Calendar & other plugins.</p>
-    <p>This plugin provides a simple way to add event codes on the page to display the list of events you want.
+    <h3><?php echo esc_html( __( 'Event Codes - Shortcodes that work with other event plugins', 'event-codes' ) ); ?></h3>
+    <h4><?php echo esc_html( __( 'Description:', 'event-codes' ) ); ?></h4>
+    <p><?php echo esc_html( __( "Most events plugins don't offer short codes (free) for displaying events. Event Codes can be used with The Events Calendar & other plugins", 'event-codes' ) ); ?></p>
+    <p><?php echo esc_html( __( 'This plugin provides a simple way to add event codes on the page to display the list of events you want.
         The default code will be [event_codes] which will display the list of most recent Upcoming Events, by default 5 events will be shown.</p>
-    <p>For e.g: If you want to display 3 upcoming events belonging to “music” category.</p>
+    <p>For e.g: If you want to display 3 upcoming events belonging to “music” category.', 'event-codes' ) ); ?></p>
     <blockquote>[event_codes cat='music' count='3']</blockquote>
     <table style="width:100%;">
         <tr>
-            <td  style="vertical-align:top">
+            <td  style="vertical-align:top;border-right:1px solid #000;">
                 <table>
                     <tr><th style="text-align:left"><b>Shortcode Options:</b></th></tr>
                     <tr><td><b>View Type & Style (view, style)</b></td></tr>
@@ -112,7 +112,7 @@ if ( ! defined( 'WPINC' ) ) {
             <td  style="vertical-align:top">
                 <table>
                     <tr><th style="text-align:left"><b>Some Examples:</b></th></tr>
-                    <tr><td>To display list of events in grid view for category conference and health.</td></tr>
+                    <tr><td>To display list of events in list view for category conference and health.</td></tr>
                     <tr><td>[event_codes view='list' style='basic' cat='conference, health']</td></tr>
                     <tr><td><a href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins-ex-1">Click to view the example</a></td></tr>
                     <tr><td><img src="<?php echo plugins_url( '/public/img/ex1.png', EVENT_CODES_FILE ); ?>"></td></tr>

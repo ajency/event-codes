@@ -23,23 +23,23 @@ For e.g: If you want to display 3 upcoming events belonging to “music” categ
 = Shortcode Options: =
 * View Type & Style (view, style)
   This is used to select the type of view and style to display the event. The default view is list with basic style.
-  `[event_codes view= ‘list' style= ‘basic']`
+  `[event_codes view= 'list' style= 'basic']`
  
   Different types of views:
  
   1)List
 	List view has 4 styles: basic, big date, card overlay and complete overlay
-            `[event_codes view=‘list' style=‘basic']`
-            `[event_codes view=‘list' style=‘big-date']`
-            `[event_codes view=‘list' style=‘card-overlay']`
-           ` [event_codes view=‘list' style=‘complete-overlay']`  
+            `[event_codes view='list' style='basic']`
+            `[event_codes view='list' style='big-date']`
+            `[event_codes view='list' style='card-overlay']`
+           ` [event_codes view='list' style='complete-overlay']`  
  
   2)Tabular 
 	Tabular view has 2 styles: basic and shadow
-             `[event_codes view=‘tabular' style=‘basic']`
-             `[event_codes view=‘tabular' style=‘shadow']`
+             `[event_codes view='tabular' style='basic']`
+             `[event_codes view='tabular' style='shadow']`
 	row value displays alternate gray shade for rows. This can be applied for both styles.
-             `[event_codes view=‘tabular' style=‘shadow' row=‘alternate-gray']`
+             `[event_codes view='tabular' style='shadow' row='alternate-gray']`
 			 
 * Show Time (showtime)
   This is used to display the time of the event. Option used is showtime and can have value true/false. Default is false.
@@ -103,23 +103,23 @@ For e.g: If you want to display 3 upcoming events belonging to “music” categ
 
 * View Type & Style (view, style)
   This is used to select the type of view and style to display the event. The default view is list with basic style.
-  `[event_codes view= ‘list' style= ‘basic']`
+  `[event_codes view= 'list' style= 'basic']`
  
   Different types of views:
  
   1)List
 	List view has 4 styles: basic, big date, card overlay and complete overlay
-            `[event_codes view=‘list' style=‘basic']`
-            `[event_codes view=‘list' style=‘big-date']`
-            `[event_codes view=‘list' style=‘card-overlay']`
-           ` [event_codes view=‘list' style=‘complete-overlay']`  
+            `[event_codes view='list' style='basic']`
+            `[event_codes view='list' style='big-date']`
+            `[event_codes view='list' style='card-overlay']`
+           ` [event_codes view='list' style='complete-overlay']`  
  
   2)Tabular 
 	Tabular view has 2 styles: basic and shadow
-             `[event_codes view=‘tabular' style=‘basic']`
-             `[event_codes view=‘tabular' style=‘shadow']`
+             `[event_codes view='tabular' style='basic']`
+             `[event_codes view='tabular' style='shadow']`
 	row value displays alternate gray shade for rows. This can be applied for both styles.
-             `[event_codes view=‘tabular' style=‘shadow' row=‘alternate-gray']`
+             `[event_codes view='tabular' style='shadow' row='alternate-gray']`
 			 
 * Show Time (showtime)
   This is used to display the time of the event. Option used is showtime and can have value true/false. Default is false.
@@ -169,8 +169,8 @@ We are always ready to help everyone.
 == Screenshots ==
 
 1. Once the plugin is installed and activated, add the shortcode option to the page where you want to display the events.
-2. To display events in a tabular view.
-3. List of options for shortcodes can be viewed from the Event Codes page
+2. List of options for shortcodes can be viewed from the Event Codes page
+3. The plugin supports bootstrap as well as non-bootstrap themes.
 
 
 == Changelog ==

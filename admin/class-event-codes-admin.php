@@ -218,7 +218,6 @@ class Event_Codes_Admin {
 		$more_links = array();
 		if ( class_exists( 'Tribe__Settings' ) and method_exists( Tribe__Settings::instance(), 'should_setup_pages' ) and Tribe__Settings::instance()->should_setup_pages() )
 		$more_links[] = '<a href="' . admin_url( 'edit.php?post_type=tribe_events&page=event-codes&tab=settings' ) . '">' . esc_html__( 'Settings', 'the-events-calendar-shortcode' ) . '</a>';
-
 		return array_merge( $more_links , $links );
 	}
 
