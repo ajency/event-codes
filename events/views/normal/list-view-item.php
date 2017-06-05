@@ -17,7 +17,7 @@ if ( ! defined( 'WPINC' ) ) {
             ?>
 
             <a href="<?php echo $event['title_link']; ?>" class="aj-list__image aj__data-image" style="<?php echo $img_style; ?>">
-                <img src="<?php echo $event['art_work']; ?>"" alt="">
+                <img alt="<?php echo $event['title']; ?>" src="<?php echo $event['art_work']; ?>"" alt="">
             </a>
         </div>
         <div class="aj-list__content">

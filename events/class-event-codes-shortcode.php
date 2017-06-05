@@ -46,7 +46,7 @@ class Event_Codes_Shortcode {
             'count' => 5,
             'offset' => 0,
             'showtime' => false,
-            'description' => false,
+            'description' => true,
             'row' => false,
             'past' => false,
             'featured' => false,
@@ -135,7 +135,7 @@ class Event_Codes_Shortcode {
 
         //based on views validate styles and other style related options
         if(isset($atts['view']) && $atts['view'] == 'list') {
-            $list_style_allowed_values = ['basic', 'big-date', 'card-overlay', 'complete-overlay'];
+            $list_style_allowed_values = ['basic', 'big-date', 'card-overlay'];
             if(isset($atts['style']) && !in_array($atts['style'],$list_style_allowed_values)) {
                 unset($atts['style']);
             }
