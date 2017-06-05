@@ -84,6 +84,7 @@ class Event_Codes_Shortcode {
             $this->default_atts(), $atts, 'event_codes'
         );
 
+        //Get other options based on backend config
         //Check if bootstrap or normal view from settings
         $options =  get_option('event_codes_settings');
         if(empty($options)){

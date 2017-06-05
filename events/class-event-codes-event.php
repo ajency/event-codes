@@ -80,9 +80,9 @@ class Event_Codes_Event {
 
 
 	public function setDates($event_start_date,$event_end_date,$all_day = false, $showtime = true){
-		$startDateDay = date('d',$event_start_date);
+		$startDateDay = date('dS',$event_start_date);
 		$startDateMon = date('M',$event_start_date);
-		$endDateDay = date('d',$event_end_date);
+		$endDateDay = date('dS',$event_end_date);
 		$endDateMon = date('M',$event_end_date);
 		$startTime = $showtime == true ? date('h:i A',$event_start_date) : false;
 		$endTime = $showtime == true ? date('h:i A',$event_end_date) : false;
