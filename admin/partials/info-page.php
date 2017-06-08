@@ -24,11 +24,10 @@ if ( ! defined( 'WPINC' ) ) {
                     <tr><td></td></tr>
                     <tr><td>Different types of views:</td></tr>
                     <tr><td>1) List</td></tr>
-                    <tr><td>List view has 4 styles: basic, big date, card overlay and complete overlay</td></tr>
+                    <tr><td>List view has 4 styles: basic, big date, card overlay.</td></tr>
                     <tr><td>[event_codes view='list' style='basic']</td></tr>
                     <tr><td>[event_codes view='list' style='big-date']</td></tr>
                     <tr><td>[event_codes view='list' style='card-overlay']</td></tr>
-                    <tr><td>[event_codes view='list' style='complete-overlay']</td></tr>
                     <tr><td></td></tr>
                     <tr><td>2)   Tabular</td></tr>
                     <tr><td>Tabular view has 2 styles: basic and shadow</td></tr>
@@ -45,10 +44,10 @@ if ( ! defined( 'WPINC' ) ) {
                     <tr><td></td></tr>
                     <tr><td></td></tr>
                     <tr><td><b>Description (description)</b></td></tr>
-                    <tr><td>This controls whether the description of the event is to be shown or not. The option is description with value true/false. Default is false.</td></tr>
+                    <tr><td>This controls whether the description of the event is to be shown or not. The option is description with value true/false. Default is true.</td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
-                    <tr><td>[event_codes description='true']</td></tr>
+                    <tr><td>[event_codes description='false']</td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
                     <tr><td><b>Number of events (count)</b></td></tr>
@@ -112,28 +111,32 @@ if ( ! defined( 'WPINC' ) ) {
             <td  style="vertical-align:top">
                 <table>
                     <tr><th style="text-align:left"><b>Some Examples:</b></th></tr>
-                    <tr><td>To display list of events in list view for category conference and health.</td></tr>
-                    <tr><td>[event_codes view='list' style='basic' cat='conference, health']</td></tr>
+                    <tr><td>List of events in "basic" style belonging to category "conference" and "health". "View All" action is not displayed.</td></tr>
+                    <tr><td> [event_codes view= 'list' style='basic' cat= 'conference, health'   show-view-all='false']</td></tr>
                     <tr><td><a href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins-ex-1">Click to view the example</a></td></tr>
                     <tr><td><img src="<?php echo plugins_url( '/public/img/ex1.png', EVENT_CODES_FILE ); ?>"></td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
-                    <tr>  <td>To display  events in tabular view shadow style along with description and time</td></tr>
-                    <tr>  <td> [event_codes view='tabular' style='shadow' showtime='true' description='true'] </td></tr>
+                    <tr><td>Events displayed in "tabular" view, "shadow" style. Time of the event is displayed, description and load more action hidden.</td></tr>
+                    <tr><td> [event_codes view='tabular' style='shadow' showtime='true' description='false' show-load-more='false']</td></tr>
                     <tr><td><a href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins-ex-2">Click to view the example</a></td></tr>
                     <tr><td><img src="<?php echo plugins_url( '/public/img/ex2.png', EVENT_CODES_FILE ); ?>"></td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
-                    <tr><td>To  display 6 events in tabular view basic style with alternate row gray.</td></tr>
-                    <tr><td>[event_codes view='tabular' style='basic' row='alternate-gray' showtime='true' description='true' count='6' ] </td></tr>
+                    <tr><td>Events in "tabular" view, "basic" style with alternate gray rows showing 6 events. Time and description not displayed.</td></tr>
+                    <tr><td> [event_codes view='tabular' style='basic' row='alternate-gray' showtime='false' description='false' count='6']</td></tr>
                     <tr><td><a href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins-ex-3">Click to view the example</a></td></tr>
                     <tr><td><img src="<?php echo plugins_url( '/public/img/ex3.png', EVENT_CODES_FILE ); ?>"></td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
-                    <tr><td>To display list of featured events</td></tr>
+                    <tr><td>List of "featured" events in "card overlay" style.</td></tr>
                     <tr><td> [event_codes view='list' style='card-overlay' featured='true']</td></tr>
                     <tr><td><a href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins-ex-4">Click to view the example</a></td></tr>
                     <tr><td><img src="<?php echo plugins_url( '/public/img/ex4.png', EVENT_CODES_FILE ); ?>"></td></tr>
+                    <tr><td>List of past events in "big date" style.</td></tr>
+                    <tr><td> [event_codes view='list' style='big-date' past='true']</td></tr>
+                    <tr><td><a href="http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins-ex-5">Click to view the example</a></td></tr>
+                    <tr><td><img src="<?php echo plugins_url( '/public/img/ex5.png', EVENT_CODES_FILE ); ?>"></td></tr>
                 </table>
             </td>
         </tr>
