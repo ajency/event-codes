@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
                     <tr><td></td></tr>
                     <tr><td>Different types of views:</td></tr>
                     <tr><td>1) List</td></tr>
-                    <tr><td>List view has 4 styles: basic, big date, card overlay.</td></tr>
+                    <tr><td>List view has 3 styles: basic, big date and card overlay.</td></tr>
                     <tr><td>[event_codes view='list' style='basic']</td></tr>
                     <tr><td>[event_codes view='list' style='big-date']</td></tr>
                     <tr><td>[event_codes view='list' style='card-overlay']</td></tr>
