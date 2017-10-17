@@ -54,6 +54,7 @@ class Event_Codes_Shortcode {
             'cat' => false,
             'show-load-more' => true,
             'show-view-all' => true,
+            'title' => 'Events',
         );
     }
 
