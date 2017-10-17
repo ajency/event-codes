@@ -106,6 +106,13 @@ if ( ! defined( 'WPINC' ) ) {
                     <tr><td>[event_codes show-load-more='false']</td></tr>
                     <tr><td></td></tr>
                     <tr><td></td></tr>
+                    <tr><td><b>Title (title)<b></td></tr>
+                    <tr><td>This will allow to set a title to the events displayed.</td></tr>
+                    <tr><td> If the title is not entered, then default values for future events will be “Upcoming Events” and in case of past and featured events the title will be “Past Events” and “Upcoming Featured Events” respectively.</td></tr>
+                    <tr><td></td></tr>
+                    <tr><td></td></tr>
+                    <tr><td>[event_codes title =’Events this Week’]</td></tr>
+
                 </table>
             </td>
             <td  style="vertical-align:top">

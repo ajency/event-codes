@@ -26,7 +26,7 @@ if($atts['style'] == 'big-date') {
 }
 ?>
 <div class="aj">
-    <h3 class="aj__title"><?php echo $event_data->event_range_lbl; ?> Events</h3>
+    <h3 class="aj__title"><?php echo ($atts['title']=='Events')? $event_data->event_range_lbl.' '.$atts['title'] : $atts['title']; ?></h3>
     <div id="data-<?php echo $shortcode_id; ?>" class="aj-list aj-list--<?php echo $atts['style']; ?> <?php echo $atts['description'] ? 'aj--hasdesc':'' ?> <?php echo $atts['showtime'] ? 'aj--hastime':'' ?> aj--hasprice">
         <?php foreach($event_data->events as $event) : ?>
             <?php include(dirname( __FILE__ )  . '/list-view-item.php' ); ?>
