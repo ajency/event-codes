@@ -81,6 +81,10 @@ For e.g: If you want to display 3 upcoming events belonging to “music” categ
 * Show Load More (show-load-more)
   This will decide if the the “Load More” action should be displayed or no. Default is true & option is show-load-more.
  `[event_codes show-load-more=’false’]`
+
+* Title (title)
+  This will allow to set a title to the events displayed. If the title is not entered, then default values for future events will be “Upcoming Events” and in case of past and featured events the title will be “Past Events” and “Upcoming Featured Events” respectively.
+  `[event_codes title =’Events this Week’]`
  
 == Installation ==
 
@@ -161,6 +165,10 @@ For e.g: If you want to display 3 upcoming events belonging to “music” categ
   This will decide if the the “Load More” action should be displayed or no. Default is true & option is show-load-more.
  `[event_codes show-load-more=’false’]`
 
+* Title (title)
+  This will allow to set a title to the events displayed. If the title is not entered, then default values for future events will be “Upcoming Events” and in case of past and featured events the title will be “Past Events” and “Upcoming Featured Events” respectively.
+  `[event_codes title =’Events this Week’]`
+
 = Do you have some problems with plugin installation? =
 
 You can visit our plugin page(http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins) and contact us.
@@ -174,6 +182,9 @@ We are always ready to help everyone.
 
 
 == Changelog ==
+
+= 1.0.1 =
+Feature - New shortcode option "title" added
 
 = 1.0.0 =
 * Initial Release
