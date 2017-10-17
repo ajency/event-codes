@@ -83,7 +83,7 @@ For e.g: If you want to display 3 upcoming events belonging to “music” categ
  `[event_codes show-load-more=’false’]`
 
 * Title (title)
-  This will allow to set a title to the events displayed. If the title is not entered, then default values for future events will be “Upcoming Events” and in case of past and featured events the title will be “Past Events” and “Upcoming Featured Events” respectively.
+  This will allow to set a heading to the events displayed. If title is not entered as the shortcode option, then default value for future events will be “Upcoming Events” and in case of past and featured events the heading will be “Past Events” and “Upcoming Featured Events” respectively.
   `[event_codes title =’Events this Week’]`
  
 == Installation ==
@@ -166,7 +166,7 @@ For e.g: If you want to display 3 upcoming events belonging to “music” categ
  `[event_codes show-load-more=’false’]`
 
 * Title (title)
-  This will allow to set a title to the events displayed. If the title is not entered, then default values for future events will be “Upcoming Events” and in case of past and featured events the title will be “Past Events” and “Upcoming Featured Events” respectively.
+  This will allow to set a heading to the events displayed. If title is not entered as the shortcode option, then default value for future events will be “Upcoming Events” and in case of past and featured events the heading will be “Past Events” and “Upcoming Featured Events” respectively.
   `[event_codes title =’Events this Week’]`
 
 = Do you have some problems with plugin installation? =
