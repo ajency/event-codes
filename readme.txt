@@ -184,7 +184,7 @@ We are always ready to help everyone.
 == Changelog ==
 
 = 1.0.1 =
-Feature - New shortcode option "title" added
+* Feature - New shortcode option "title" added
 
 = 1.0.0 =
 * Initial Release
