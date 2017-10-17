@@ -15,7 +15,7 @@
  * Plugin Name:       Event Codes - Shortcodes that work with other event plugins
  * Plugin URI:        http://wpdwarves.com/event-codes-shortcodes-that-work-with-other-event-plugins
  * Description:       EventCodes plugin provides a shortcode that can be used to display a list of events on home page, sidebar or any other part of the site.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            WPdwarves
  * Author URI:        http://wpdwarves.com
  * License:           GPL-2.0+
